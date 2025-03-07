@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>dienstzeiten_app</id>
+    <name>Dienstzeiten</name>
+    <summary>App zur Verwaltung von Dienstzeiten</summary>
+    <description>
+        Diese App ermöglicht das Erfassen von Dienstzeiten mit einem Formular und einem Genehmigungsprozess.
+        Die Funktionen umfassen:
+        - Erfassung der Dienstzeiten mit digitaler Unterschrift
+        - Automatische Weiterleitung an Teamleitung zur Genehmigung
+        - Benachrichtigungen per E-Mail
+        - PDF-Export der genehmigten Dienste
+    </description>
+    <version>0.1.0</version>
+    <licence>agpl</licence>
+    <author>Nextcloud App Developer</author>
+    <namespace>DienstzeitenApp</namespace>
+    <category>tools</category>
+    <category>organization</category>
+    <bugs>https://your-support-url.com</bugs>
+    <dependencies>
+        <nextcloud min-version="26" max-version="28"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Dienstzeiten</name>
+            <route>dienstzeiten_app.dienstzeiten.index</route>
+            <icon>app.svg</icon>
+        </navigation>
+    </navigations>
+    <settings>
+        <admin>OCA\DienstzeitenApp\Settings\Admin</admin>
+        <admin-section>OCA\DienstzeitenApp\Settings\AdminSection</admin-section>
+    </settings>
+</info>
